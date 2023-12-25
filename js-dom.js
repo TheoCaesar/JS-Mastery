@@ -107,3 +107,21 @@ kaboom = function () {
 
     }
 }
+
+bodyEl = document.querySelector("body")
+
+//Event Listeners: addEventListener() - helps add numerous event listeners on htm prop
+newbtn = document.createElement("button")
+newbtntxt = document.createTextNode("Trigger Event");
+newbtn.appendChild(newbtntxt);
+bodyEl.appendChild(newbtn);
+
+newbtn.setAttribute("id", "eventBtn");
+newbtn.addEventListener("click", ()=> {
+    bodyEl.style.background = colours[Math.floor(Math.random() * colours.length)];
+}, "mouseenter", ()=>{
+    newbtn.style.background = colours[Math.floor(Math.random() * colours.length)];
+})
+
+eventBtn = document.getElementById("eventBtn");
+
