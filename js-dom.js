@@ -125,3 +125,33 @@ newbtn.addEventListener("click", ()=> {
 
 eventBtn = document.getElementById("eventBtn");
 
+//Events - target is element triggering teh said event; repd by e, evt, event or $event;
+var eventButton = document.querySelector("#eventBtn");
+
+eventButton.addEventListener('mouseenter', (e)=> {
+    e.target.style.background = "rgb(241, 91, 22)";
+    e.target.style.color = "rgb(10,10,101)";
+});
+
+eventButton.addEventListener("mouseleave", (event)=> {
+    event.target.style.background = "white"
+    event.target.style.color = "black"
+});
+
+//Events - preventDefault helps put a hold on default event actions, so we could perform certain tasks first.
+anchor.addEventListener("click", (e)=>{
+    e.preventDefault()
+    console.log("Prevent Default in action...")
+})
+// -- tried to do it on our event button but then teh event button's funciton works inspite of preventDefault();
+
+
+//capture form contents 
+var formEl = document.querySelector("form");
+formEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    var formContents = document.querySelector("input").value;
+    console.log(formContents);
+})
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;padding: 0;box-sizing: border-box;
+            }
+            .events {
+                border: 2px solid red;
+                margin: 10px 20px;
+                padding: 10px;
+                width: 400px;                
+            }
+
+            .mouse form {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            input {
+                padding: 5px 15px;
+                margin: 5px 0;
+            }
+            /* .scroll {
+                position: relative;
+            } */
+            #scroll-container {
+                width: 100%;
+                margin: 5px auto;
+                padding: 5px 10px;
+                overflow-x: scroll;   
+                border: 2px solid rgb(243, 243, 30);          
+            }
+            #scroll-box {
+                position: relative;
+                height: 80px;
+                width: 900px;
+                margin: 10px auto;
+                background: #000;
+            }
+            #guess-key{
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mouse events">
+            <h1>Mouse Events</h1>
+            <form action="" method="get">
+                <div>
+                    <label for="username">Your Username</label>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <input id="submit" type="submit" value="Go">
+                </div>
+            </form>
+        </div>
+
+        <div class="scroll events">
+            <h1>Scroll Events</h1>
+            <div id ='scroll-container'>
+                <div id="scroll-box"></div>
+            </div>
+        </div>
+
+        <div class="Keydown events">
+            <h1>Keydown Events</h1>
+            <label for="guesser">Press any key...</label>
+            <input type="text" name="guesser" id="guess-key">
+            <p id="response"></p>
+        </div>
+
+        <script src = "./events.js"></script>
+    </body>
+</html>
