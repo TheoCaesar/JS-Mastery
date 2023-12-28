@@ -89,3 +89,18 @@ caps = (str)=> {
 }
 
 console.log(caps("Merry Christmas"))
+
+/**Namespacing  
+ * - wrap code in an immediatelly invoked function 
+ * - to run the  moment script loads, 
+ * - allowing us to ensure variables remain local to functions
+ * */
+
+(function() // step two - function declaration & definition
+    {   //function definition
+        "use strict" //ensures that our variables are properly declared
+        var printSmfn="this is our function expression";
+        console.log(printSmfn);
+    }
+    () //step three - funciton execution or call
+);
