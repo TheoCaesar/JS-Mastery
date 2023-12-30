@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Wishlist</title>
+    <link rel="stylesheet" href="./vacation-wish-list.css">
+    <script src="./vacation-wish-list.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>vacation destinations wish list</h1>
+            <h5>Found exicting places to visit on your next vacation? Use the form below to add them to your wish list.</h5>
+        </div>
+        <div class="content">
+            <div class="left">
+                <form action="">
+                    <div class="dest-name">
+                        <label for="destination-name">Destination Name</label>
+                        <input type="text" name="destination-name" id="dest-name-input" placeholder="Provide a name for the destination">
+                    </div>
+                    <div class="dest-loc">
+                        <label for="destination-loc">Destination Location</label>
+                        <input type="text" name="destination-loc" id="dest-loc-input" placeholder="Where is the destination?">
+                    </div>
+                    <div class="dest-photo-url">
+                        <label for="destination-photo">Photo</label>
+                        <input type="text" name="destination-photo" id="dest-photo-url-input" placeholder="Provide a URL for a photo">
+                    </div>
+                    <div class="dest-desc">
+                        <label for="destination-desc">Destination Description</label>
+                        <textarea name="destination-desc" id="dest-desc-input" cols="30" rows="5" placeholder="Describe the destination"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Add to List" id="submitBtn">
+                    </div>
+                
+                </form>
+            </div>
+            <div class="right">
+                <h3> Enter Destination Details</h3>
+                <div class="dest-info hidden">
+                    <div id="dest-img-container" class="hidden"></div>
+                    <p id="dest-info-nom" class="hidden-txt">destination name</p>
+                    <p id="dest-info-loc" class="hidden-txt">destination location</p>
+                    <p id="dest-info-about" class="hidden-txt">destination info</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
