@@ -60,33 +60,5 @@
     <script src="./jQuery-v3.5.1.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="./jQueryEffects.js"></script>
-    <script>
-        $("#growbox").click(function(){
-             $("#box4").animate({"width": "400px" },"2800");
-        });
-
-        $("#growtext").click(function(){
-            $("#box4").animate({"font-size":"32px"}, "1000"); //hide in 1.5s animation
-            // $("#box4").animate({"background-color":"white"}, "1000")
-        });
-
-        $("#movebox").click(function(){
-            $("#box4").animate({"left":"+=400px"},"1800"); //not working till we add the left prop in our css
-            console.log("moving")
-        })
-
-        $("#sequence").click(function(){
-            $("#box4").animate({"width": "400px" },"2800", function(){
-                $("#box4").animate({"font-size":"32px"}, "1000", function() {
-                    $("#box4").animate({"left":"+=400px"},"1800");
-                })
-            }); //not working
-        });
-
-        //do it all at once
-        $("#doall").click(function(){
-            $("#box4").animate({"width": "400px", "font-size":"32px", "left":"+=400px"},"2800"); 
-        });
-    </script>
 </body>
 </html>
