@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects in JQuery</title>
+    <link rel="stylesheet" href="./jQueryEffects.css">
+</head>
+<body>
+    <div>
+        <h2>Hide & Show helper functions</h2>
+        <nav>
+            <ul>
+                <li><a href="#" id="hidebox">Hide</a></li>
+                <li><a href="#" id="showbox">Show</a></li>
+                <li><a href="#" id="togglebox">Toggle</a></li>
+            </ul>
+        </nav>
+        <div id="box1" class="box"></div>
+    </div>
+    <div>
+        <h2>Slide Up & Slide Down helper functions</h2>
+        <nav>
+            <ul>
+                <li><a href="#" id="slideUpbox">slideUp</a></li>
+                <li><a href="#" id="slideDownbox">slideDown</a></li>
+                <li><a href="#" id="slidetogglebox">slideToggle</a></li>
+            </ul>
+        </nav>
+        <div id="box2" class="box"></div>
+    </div>
+    <div>
+        <h2>Fade In & Fade Out helper functions</h2>
+        <nav>
+            <ul>
+                <li><a href="#" id="fadeOutbox">fadeOut</a></li>
+                <li><a href="#" id="fadeInbox">fadeIn</a></li>
+                <li><a href="#" id="fadeOutTobox">fadeOut To 20%</a></li>
+                <li><a href="#" id="fadeInTobox">fadeIn To 50%</a></li>
+            </ul>
+        </nav>
+        <div id="box3" class="box"></div>
+    </div>
+    <div>
+        <h2>More helper functions</h2>
+        <nav>
+            <ul>
+                <li><a href="#" id="growbox">grow box</a></li>
+                <li><a href="#" id="growtext">grow text</a></li>
+                <li><a href="#" id="movebox">move box</a></li>
+                <li><a href="#" id="doall">do all</a></li>
+                <li><a href="#" id="sequence">sequence</a></li>
+            </ul>
+        </nav>
+        <div id="box4" class="box">
+            <p>Chicken & Turkeys for Christmas!</p>
+        </div>
+    </div>
+
+    <script src="./jQuery-v3.5.1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="./jQueryEffects.js"></script>
+    <script>
+        $("#growbox").click(function(){
+             $("#box4").animate({"width": "400px" },"2800");
+        });
+
+        $("#growtext").click(function(){
+            $("#box4").animate({"font-size":"32px"}, "1000"); //hide in 1.5s animation
+            // $("#box4").animate({"background-color":"white"}, "1000")
+        });
+
+        $("#movebox").click(function(){
+            $("#box4").animate({"left":"+=400px"},"1800"); //not working till we add the left prop in our css
+            console.log("moving")
+        })
+
+        $("#sequence").click(function(){
+            $("#box4").animate({"width": "400px" },"2800", function(){
+                $("#box4").animate({"font-size":"32px"}, "1000", function() {
+                    $("#box4").animate({"left":"+=400px"},"1800");
+                })
+            }); //not working
+        });
+
+        //do it all at once
+        $("#doall").click(function(){
+            $("#box4").animate({"width": "400px", "font-size":"32px", "left":"+=400px"},"2800"); 
+        });
+    </script>
+</body>
+</html>
