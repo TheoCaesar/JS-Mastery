@@ -3,7 +3,6 @@ let numOfDivs = $('#container div').length;
 function contentRotator(){
     $(`#container div:nth-child(${counter})`).fadeIn(2000, ()=>{
         if (counter == numOfDivs) {
-        console.log("this is last child", $(this));
             setTimeout(() => {
                 $(`#container div:nth-child(${counter})`).fadeOut(900, ()=>{
                     counter = 1;
